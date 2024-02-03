@@ -58,6 +58,10 @@ body {
   background-color: #f7f7f7;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
@@ -245,10 +249,10 @@ main {
   content: "About Me";
 }
 .sidebar__content__nav a:nth-of-type(3)::after {
-  content: "Services";
+  content: "Projects";
 }
 .sidebar__content__nav a:nth-of-type(4)::after {
-  content: "Projects";
+  content: "Services";
 }
 .sidebar__content__nav a:nth-of-type(5)::after {
   content: "Testimonials";
@@ -399,6 +403,70 @@ main {
 .main-content__inner .services-section__boxes__box p a {
   color: #ff6bcb;
   text-decoration: underline;
+}
+.main-content__inner .portfolio-section {
+  padding-bottom: 6rem;
+}
+.main-content__inner .portfolio-section .section-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-content__inner .portfolio-section .section-top a {
+  font-family: "Lineal Regular";
+  color: #090909;
+  font-size: 24px;
+}
+.main-content__inner .portfolio-section__boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+.main-content__inner .portfolio-section__boxes__box {
+  border: 3px solid #090909;
+  max-width: 450px;
+  width: 33%;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+.main-content__inner .portfolio-section__boxes__box__tags {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.main-content__inner .portfolio-section__boxes__box__tags p {
+  padding: 0.25rem;
+  font-size: 17px;
+  background-color: #f7f7f7;
+  border: 2px solid #090909;
+  margin: 0;
+  margin-right: 0.5rem;
+  font-family: "Lineal Regular";
+}
+.main-content__inner .portfolio-section__boxes__box img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7/8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-bottom: 2px solid #090909;
+}
+.main-content__inner .portfolio-section__boxes__box__text {
+  padding: 1rem;
+}
+.main-content__inner .portfolio-section__boxes__box__text h3 {
+  font-size: 36px;
+  font-family: "Soria";
+  margin: 0;
+}
+.main-content__inner .portfolio-section__boxes__box:hover {
+  box-shadow: 7px 7px 0px 0px rgb(0, 0, 0);
 }
 
 footer {

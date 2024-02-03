@@ -13,6 +13,10 @@ body {
   background-color: $white;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;

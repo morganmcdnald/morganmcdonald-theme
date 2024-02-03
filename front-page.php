@@ -6,8 +6,8 @@
         <div class="sidebar__content__nav">
             <a href="#" aria-label="Home"><i class="fa-solid fa-house"></i></a>
             <a href="#" aria-label="About Me"><i class="fa-solid fa-user"></i></a>
-            <a href="#" aria-label="Services"><i class="fa-solid fa-bars-staggered"></i></a>
             <a href="#" aria-label="Portfolio"><i class="fa-solid fa-computer"></i></a>
+            <a href="#" aria-label="Services"><i class="fa-solid fa-bars-staggered"></i></a>
             <a href="#" aria-label="Testimonial"><i class="fa-solid fa-message"></i></a>
             <a href="#" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
         </div>
@@ -42,6 +42,50 @@
                 <p>I am a web developer from <span>Glasgow</span> working for a creative agency in the city. Qualified in <span>Computer Science</span> to BA degree level, with additional qualifications under my belt, I have plenty experience and know-how.</p>
                 <p>Currently working as a <span>WordPress</span> developer, I have been in my role for <span>3</span> years and have gained knowledge and experience to build upon my passion for <span>front-end</span> work and design. This combination gives me a unique set of skills which allows me to not only develop a website that is easy on the eyes, but is also both <span>functional and accessible</span>.</p>
                 <p>I am a solid <span>multitasker</span> and have a strong attention to detail, as well as experience brought with me from my educational and professional careers. I am currently taking on work as a <span>freelancer</span> so if you are interested in working together, <a href="#">get in touch</a>!</p>
+            </section>
+            
+            <section class="portfolio-section" id="portfolio-section">
+                <div class="section-top">
+                    <div class="section-indicator">
+                        <i class="fa-solid fa-computer"></i>
+                        <p>Portfolio</p>
+                    </div>
+                    <a href="#">View All Projects Here</a>
+                </div>
+                <div class="portfolio-section__boxes">
+                    <div class="portfolio-section__boxes__box">
+                        <div class="portfolio-section__boxes__box__tags">
+                            <p>WordPress</p>
+                            <p>Figma</p>
+                        </div>
+                        <img src="https://media.vanityfair.com/photos/659b1d62b6a2e69c16d6f56e/master/w_1600%2Cc_limit/02_2024_Renee_Rapp02.jpg" alt="">
+                        <div class="portfolio-section__boxes__box__text">
+                            <h3>McDonald Plumbing</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-section__boxes__box">
+                        <div class="portfolio-section__boxes__box__tags">
+                            <p>Django</p>
+                            <p>Figma</p>
+                        </div>
+                        <img src="https://pbs.twimg.com/media/F6usV0CWIAAJdiO?format=jpg&name=large" alt="">
+                        <div class="portfolio-section__boxes__box__text">
+                            <h3>SmolScreen</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-section__boxes__box">
+                        <div class="portfolio-section__boxes__box__tags">
+                            <p>WordPress</p>
+                            <p>Figma</p>
+                        </div>
+                        <img src="https://64.media.tumblr.com/6afce3f2f637c7dd89ab2830622a1755/f389f3159e508932-40/s1280x1920/34f04abd540af502827567808ada535f2855a961.jpg" alt="">
+                        <div class="portfolio-section__boxes__box__text">
+                            <h3>Hammond Realty</h3>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="services-section" id="services-section">
@@ -89,12 +133,6 @@
                 </div>
             </section>
 
-            <section class="portfolio-section" id="portfolio-section">
-                <div class="section-indicator">
-                    <i class="fa-solid fa-computer"></i>
-                    <p>Portfolio</p>
-                </div>
-            </section>
 
             <section class="testimonials-section" id="testimonials-section">
                 <div class="section-indicator">
