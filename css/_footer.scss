@@ -1,0 +1,40 @@
+footer {
+  background-color: $white;
+  color: $black;
+  padding: 1rem 2rem;
+  margin-left: -3px;
+  border: 3px solid $black;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  p {
+    font-family: "Lineal Regular";
+    font-size: 1rem;
+    span {
+      font-family: "Soria";
+      color: $blue;
+      font-size: 1.3rem;
+    }
+  }
+  .footer {
+    &__links {
+      display: flex;
+      flex-direction: row;
+      p {
+        margin-right: 0.75rem;
+        a {
+          color: $black;
+          text-decoration: none;
+          transition: color 0.4s ease;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

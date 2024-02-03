@@ -23,6 +23,26 @@ select {
   text-rendering: optimizeLegibility;
 }
 
+@font-face {
+  font-family: Lineal Regular;
+  src: url("../fonts/Lineal-Regular.woff2"), url("../fonts/Lineal-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Lineal Bold;
+  src: url("../fonts/Lineal-Bold.woff2"), url("../fonts/Lineal-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Soria;
+  src: url("../fonts/soria-font.woff2"), url("../fonts/soria-font.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: League Spartan;
+  src: url("../fonts/LeagueSpartan-Regular.woff2"), url("../fonts/LeagueSpartan-Regular.ttf") format("truetype");
+  font-display: swap;
+}
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -30,6 +50,28 @@ select {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6bcb;
+  border-radius: 10px;
 }
 
 a:visited {
@@ -75,11 +117,325 @@ a:visited {
     opacity: 1;
   }
 }
-@keyframes scale {
-  from {
-    font-variation-settings: "wght" 100;
-  }
-  to {
-    font-variation-settings: "wght" 1000;
-  }
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: #f7f7f7;
+  z-index: 3;
+}
+header .header-inner {
+  border-bottom: 3px solid #090909;
+}
+header .header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .header-content__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .header-content__right a {
+  text-decoration: none;
+  font-family: "Lineal Regular", serif;
+  padding: 0 1rem;
+  border-left: 3px solid #090909;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #090909;
+  transition: background-color 0.4s ease;
+}
+header .header-content__right a:nth-of-type(5) {
+  padding-right: 1.5rem;
+}
+header .header-content__right a:hover:nth-of-type(1) {
+  background-color: #ff6bcb;
+}
+header .header-content__right a:hover:nth-of-type(2) {
+  background-color: #82ffa8;
+}
+header .header-content__right a:hover:nth-of-type(3) {
+  background-color: #39c4ff;
+}
+header .header-content__right a:hover:nth-of-type(4) {
+  background-color: #f7ff83;
+}
+header .header-content__right a:hover:nth-of-type(5) {
+  background-color: #d28ef2;
+}
+header .header-content__left {
+  padding: 1rem;
+}
+header .header-content__left a {
+  text-decoration: none;
+  font-family: "Soria", serif;
+  font-size: 2rem;
+  transition: color 0.4s ease;
+}
+header .header-content__left a:hover {
+  color: #ff6bcb;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 5%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  padding: 6rem 1rem 1rem 1rem;
+}
+.sidebar__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.sidebar__content a {
+  margin-bottom: 0.75rem;
+}
+.sidebar__content__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar__content__nav a {
+  position: relative;
+}
+.sidebar__content__nav a::before {
+  content: "";
+  position: absolute;
+  background-color: #f7f7f7;
+  border: 2px solid #090909;
+  border-right: none;
+  border-bottom: none;
+  margin-left: 29px;
+  transform: rotate(-45deg);
+  padding: 0.25rem;
+  z-index: 1;
+  margin-top: 4px;
+  display: none;
+}
+.sidebar__content__nav a::after {
+  content: "";
+  position: absolute;
+  background-color: #f7f7f7;
+  border: 2px solid #090909;
+  padding: 0.25rem 0.45rem;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "Lineal Regular";
+  color: #090909;
+  font-size: 14px;
+  margin-top: -7px;
+  left: 33.5px;
+  display: none;
+}
+.sidebar__content__nav a:nth-of-type(1)::after {
+  content: "Home";
+}
+.sidebar__content__nav a:nth-of-type(2)::after {
+  content: "About Me";
+}
+.sidebar__content__nav a:nth-of-type(3)::after {
+  content: "Services";
+}
+.sidebar__content__nav a:nth-of-type(4)::after {
+  content: "Projects";
+}
+.sidebar__content__nav a:nth-of-type(5)::after {
+  content: "Testimonials";
+}
+.sidebar__content__nav a:nth-of-type(6)::after {
+  content: "Contact";
+}
+.sidebar__content__nav a:hover::before, .sidebar__content__nav a:hover::after {
+  display: inline;
+}
+.sidebar__content__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar__content__socials a:last-of-type {
+  margin-bottom: 0;
+}
+.sidebar__content i {
+  color: #090909;
+  font-size: 1.15rem;
+  transition: color 0.4s ease;
+}
+.sidebar__content i:hover {
+  color: #ff6bcb;
+}
+
+.main-content {
+  width: 95%;
+  border-left: 3px solid #090909;
+  left: 5%;
+  position: relative;
+  z-index: 2;
+}
+.main-content__inner {
+  padding: 8rem 5rem 2rem 5rem;
+  min-height: 150vh;
+  height: 100%;
+}
+.main-content__inner .section-indicator {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #090909;
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+}
+.main-content__inner .section-indicator p {
+  margin: 0;
+  font-size: 16px !important;
+  font-family: "Lineal Regular" !important;
+}
+.main-content__inner .section-indicator i {
+  font-size: 14px;
+  padding-right: 0.5rem;
+}
+.main-content__inner section {
+  padding-bottom: 5rem;
+}
+.main-content__inner .home-section h1 {
+  font-family: "Soria";
+  font-size: 92px;
+  margin: 0;
+}
+.main-content__inner .home-section h1 span {
+  color: #ff6bcb;
+}
+.main-content__inner .home-section h1 span.font-switch {
+  color: #090909;
+  font-family: "Lineal Regular";
+}
+.main-content__inner .home-section h2 {
+  font-family: "Soria";
+  font-size: 72px;
+  margin: 0;
+}
+.main-content__inner .home-section h2 span {
+  color: #39c4ff;
+}
+.main-content__inner .home-section p {
+  font-size: 28px;
+  font-family: "League Spartan";
+  line-height: 1.2;
+}
+.main-content__inner .about-section h3 {
+  font-size: 42px;
+  font-family: "Soria";
+}
+.main-content__inner .about-section h3 span {
+  color: #d28ef2;
+}
+.main-content__inner .about-section p {
+  font-size: 22px;
+  font-family: "League Spartan";
+  line-height: 1.2;
+}
+.main-content__inner .about-section p span {
+  color: #00c807;
+}
+.main-content__inner .about-section p a {
+  color: #ff6bcb;
+  text-decoration: underline;
+}
+.main-content__inner .services-section h3 {
+  font-size: 42px;
+  font-family: "Soria";
+}
+.main-content__inner .services-section h3 span {
+  color: #39c4ff;
+}
+.main-content__inner .services-section p {
+  font-size: 22px;
+  font-family: "League Spartan";
+  line-height: 1.2;
+}
+.main-content__inner .services-section p span {
+  color: #ff6bcb;
+}
+.main-content__inner .services-section__boxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-content__inner .services-section__boxes__box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.main-content__inner .services-section__boxes__box .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-content__inner .services-section__boxes__box .top i {
+  font-size: 22px;
+  padding-right: 0.75rem;
+  color: #d28ef2;
+}
+.main-content__inner .services-section__boxes__box .top h4 {
+  margin: 0;
+  font-size: 26px;
+}
+.main-content__inner .services-section__boxes__box p span {
+  color: #ff6bcb;
+}
+.main-content__inner .services-section__boxes__box p a {
+  color: #ff6bcb;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f7f7f7;
+  color: #090909;
+  padding: 1rem 2rem;
+  margin-left: -3px;
+  border: 3px solid #090909;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer p {
+  font-family: "Lineal Regular";
+  font-size: 1rem;
+}
+footer p span {
+  font-family: "Soria";
+  color: #39c4ff;
+  font-size: 1.3rem;
+}
+footer .footer__links {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer__links p {
+  margin-right: 0.75rem;
+}
+footer .footer__links p a {
+  color: #090909;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+footer .footer__links p a:hover {
+  color: #39c4ff;
+}
+footer .footer__links:last-of-type {
+  margin-right: 0;
 }/*# sourceMappingURL=main.css.map */

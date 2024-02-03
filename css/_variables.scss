@@ -1,0 +1,40 @@
+// --------------------
+// Fonts
+// --------------------
+
+@font-face {
+    font-family: Lineal Regular;
+    src: url('../fonts/Lineal-Regular.woff2'), url('../fonts/Lineal-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Lineal Bold;
+    src: url('../fonts/Lineal-Bold.woff2'), url('../fonts/Lineal-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Soria;
+    src: url('../fonts/soria-font.woff2'), url('../fonts/soria-font.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: League Spartan;
+    src: url('../fonts/LeagueSpartan-Regular.woff2'), url('../fonts/LeagueSpartan-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+// --------------------
+// Colours
+// --------------------
+
+$blue: #39c4ff;
+$pink: #ff6bcb;
+$purple: #d28ef2;
+$green: #82ffa8;
+$yellow: #f7ff83;
+$black: #090909;
+$white: #f7f7f7;

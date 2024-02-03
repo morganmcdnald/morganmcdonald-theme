@@ -1,0 +1,246 @@
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 5%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  padding: 6rem 1rem 1rem 1rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    a {
+      margin-bottom: 0.75rem;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $white;
+          border: 2px solid $black;
+          border-right: none;
+          border-bottom: none;
+          margin-left: 29px;
+          transform: rotate(-45deg);
+          padding: 0.25rem;
+          z-index: 1;
+          margin-top: 4px;
+          display: none;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $white;
+          border: 2px solid $black;
+          padding: 0.25rem 0.45rem;
+          min-width: fit-content;
+          width: max-content;
+          font-family: "Lineal Regular";
+          color: $black;
+          font-size: 14px;
+          margin-top: -7px;
+          left: 33.5px;
+          display: none;
+        }
+        &:nth-of-type(1) {
+          &::after {
+            content: "Home";
+          }
+        }
+        &:nth-of-type(2) {
+          &::after {
+            content: "About Me";
+          }
+        }
+        &:nth-of-type(3) {
+          &::after {
+            content: "Services";
+          }
+        }
+        &:nth-of-type(4) {
+          &::after {
+            content: "Projects";
+          }
+        }
+        &:nth-of-type(5) {
+          &::after {
+            content: "Testimonials";
+          }
+        }
+        &:nth-of-type(6) {
+          &::after {
+            content: "Contact";
+          }
+        }
+        &:hover {
+          &::before,
+          &::after {
+            display: inline;
+          }
+        }
+      }
+    }
+    &__socials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    i {
+      color: $black;
+      font-size: 1.15rem;
+      transition: color 0.4s ease;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+
+.main-content {
+  width: 95%;
+  border-left: 3px solid $black;
+  left: 5%;
+  position: relative;
+  z-index: 2;
+  &__inner {
+    padding: 8rem 5rem 2rem 5rem;
+    min-height: 150vh;
+    height: 100%;
+    .section-indicator {
+      padding: 0.5rem 0.75rem;
+      border: 2px solid $black;
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      align-items: center;
+      p {
+        margin: 0;
+        font-size: 16px !important;
+        font-family: "Lineal Regular" !important;
+      }
+      i {
+        font-size: 14px;
+        padding-right: 0.5rem;
+      }
+    }
+    section {
+      padding-bottom: 5rem;
+    }
+    .home-section {
+      h1 {
+        font-family: "Soria";
+        font-size: 92px;
+        margin: 0;
+        span {
+          color: $pink;
+          &.font-switch {
+            color: $black;
+            font-family: "Lineal Regular";
+          }
+        }
+      }
+      h2 {
+        font-family: "Soria";
+        font-size: 72px;
+        margin: 0;
+        span {
+          color: $blue;
+        }
+      }
+      p {
+        font-size: 28px;
+        font-family: "League Spartan";
+        line-height: 1.2;
+      }
+    }
+
+    .about-section {
+      h3 {
+        font-size: 42px;
+        font-family: "Soria";
+        span {
+          color: $purple;
+        }
+      }
+      p {
+        font-size: 22px;
+        font-family: "League Spartan";
+        line-height: 1.2;
+        span {
+          color: #00c807;
+        }
+        a {
+            color: $pink;
+            text-decoration: underline;
+          }
+      }
+    }
+
+    .services-section {
+      h3 {
+        font-size: 42px;
+        font-family: "Soria";
+        span {
+          color: $blue;
+        }
+      }
+      p {
+        font-size: 22px;
+        font-family: "League Spartan";
+        line-height: 1.2;
+        span {
+          color: $pink;
+        }
+      }
+      &__boxes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__box {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 1rem;
+          .top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            i {
+              font-size: 22px;
+              padding-right: 0.75rem;
+              color: $purple;
+            }
+            h4 {
+              margin: 0;
+              font-size: 26px;
+            }
+          }
+          p {
+            span {
+              color: $pink;
+            }
+            a {
+              color: $pink;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

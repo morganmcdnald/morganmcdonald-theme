@@ -5,7 +5,18 @@
 <header>
     <a href="#mainContent" class="skip-to-content sr-only">Skip to main content</a>
     <h1 class="sr-only">Morgan McDonald</h1>
-    <div class="header-inner fade-in">
-        THIS IS THE HEADER
+    <div class="header-inner">
+        <div class="header-content fade-in">
+            <div class="header-content__left">
+                <a href="/">morganmcdonald</a>
+            </div>
+            <div class="header-content__right">
+                <a href="#">about me</a>
+                <a href="#">projects</a>
+                <a href="#">services</a>
+                <a href="#">testimonials</a>
+                <a href="#">contact</a>
+            </div>
+        </div>
     </div>
 </header>
