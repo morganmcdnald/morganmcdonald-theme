@@ -23,7 +23,7 @@
 
     <section class="main-content">
         <div class="main-content__inner">
-            <section class="home-section" id="home-section">
+            <section class="home-section fade-in" id="home-section">
                 <div class="section-indicator">
                     <i class="fa-solid fa-house"></i>
                     <p>Home</p>
@@ -33,7 +33,7 @@
                 <p>Specialising in WordPress sites, I can build you something to suit your needs. Ranging from small, static sites to bespoke WordPress themes.</p>
             </section>
 
-            <section class="about-section" id="about-section">
+            <section class="about-section fade-in" id="about-section">
                 <div class="section-indicator">
                     <i class="fa-solid fa-user"></i>
                     <p>About Me</p>
@@ -44,7 +44,7 @@
                 <p>I am a solid <span>multitasker</span> and have a strong attention to detail, as well as experience brought with me from my educational and professional careers. I am currently taking on work as a <span>freelancer</span> so if you are interested in working together, <a href="#">get in touch</a>!</p>
             </section>
             
-            <section class="portfolio-section" id="portfolio-section">
+            <section class="portfolio-section fade-in" id="portfolio-section">
                 <div class="section-top">
                     <div class="section-indicator">
                         <i class="fa-solid fa-computer"></i>
@@ -88,7 +88,7 @@
                 </div>
             </section>
 
-            <section class="services-section" id="services-section">
+            <section class="services-section fade-in" id="services-section">
                 <div class="section-indicator">
                     <i class="fa-solid fa-bars-staggered"></i>
                     <p>Services</p>
@@ -134,14 +134,14 @@
             </section>
 
 
-            <section class="testimonials-section" id="testimonials-section">
+            <section class="testimonials-section fade-in" id="testimonials-section">
                 <div class="section-indicator">
                     <i class="fa-solid fa-message"></i>
                     <p>Testimonials</p>
                 </div>
             </section>
 
-            <section class="contact-section" id="contact-section">
+            <section class="contact-section fade-in" id="contact-section">
                 <div class="section-indicator">
                     <i class="fa-solid fa-envelope"></i>
                     <p>Contact</p>
