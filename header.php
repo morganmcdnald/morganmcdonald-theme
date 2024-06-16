@@ -8,6 +8,7 @@
     <div class="header-inner">
         <div class="header-content fade-in">
             <div class="header-content__left">
+                <!-- <img src="/wp-content/themes/morganmcdonald-theme/images/logo-colour.svg" alt=""> -->
                 <a href="/">morganmcdonald</a>
             </div>
             <div class="header-content__right">

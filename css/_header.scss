@@ -1,10 +1,10 @@
 header {
   position: fixed;
-  width: 100vw;
   background-color: $white;
-  z-index: 3;
+  width: 100vw;
+  z-index: 4;
   .header-inner {
-    border-bottom: 3px solid $black;
+    border-bottom: 1px solid $black;
   }
   .header-content {
     display: flex;
@@ -16,38 +16,33 @@ header {
       align-items: center;
       a {
         text-decoration: none;
-        font-family: "Lineal Regular", serif;
+        font-family: "League Spartan", serif;
         padding: 0 1rem;
-        border-left: 3px solid $black;
+        font-size: 1.25rem;
         height: 100%;
         display: flex;
         align-items: center;
         color: $black;
-        transition: background-color 0.4s ease;
+        transition: color 0.3s ease;
         &:nth-of-type(5) {
-          padding-right: 1.5rem;
+          margin-right: 1.5rem;
         }
         &:hover {
-          &:nth-of-type(1) {
-            background-color: $pink;
-          }
-          &:nth-of-type(2) {
-            background-color: $green;
-          }
-          &:nth-of-type(3) {
-            background-color: $blue;
-          }
-          &:nth-of-type(4) {
-            background-color: $yellow;
-          }
-          &:nth-of-type(5) {
-            background-color: $purple;
-          }
+         color: $blue; 
         }
       }
     }
     &__left {
-      padding: 1rem;
+      padding: 1rem 1rem 1rem calc(5% + 1rem);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: calc(5% + 1rem);
+        margin-left: 1rem;
+      }
       a {
         text-decoration: none;
         font-family: "Soria", serif;

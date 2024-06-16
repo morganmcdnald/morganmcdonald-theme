@@ -74,7 +74,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ff6bcb;
+  background: #23C5E9;
   border-radius: 10px;
 }
 
@@ -123,12 +123,12 @@ a:visited {
 }
 header {
   position: fixed;
-  width: 100vw;
   background-color: #f7f7f7;
-  z-index: 3;
+  width: 100vw;
+  z-index: 4;
 }
 header .header-inner {
-  border-bottom: 3px solid #090909;
+  border-bottom: 1px solid #090909;
 }
 header .header-content {
   display: flex;
@@ -142,35 +142,32 @@ header .header-content__right {
 }
 header .header-content__right a {
   text-decoration: none;
-  font-family: "Lineal Regular", serif;
+  font-family: "League Spartan", serif;
   padding: 0 1rem;
-  border-left: 3px solid #090909;
+  font-size: 1.25rem;
   height: 100%;
   display: flex;
   align-items: center;
   color: #090909;
-  transition: background-color 0.4s ease;
+  transition: color 0.3s ease;
 }
 header .header-content__right a:nth-of-type(5) {
-  padding-right: 1.5rem;
+  margin-right: 1.5rem;
 }
-header .header-content__right a:hover:nth-of-type(1) {
-  background-color: #ff6bcb;
-}
-header .header-content__right a:hover:nth-of-type(2) {
-  background-color: #82ffa8;
-}
-header .header-content__right a:hover:nth-of-type(3) {
-  background-color: #39c4ff;
-}
-header .header-content__right a:hover:nth-of-type(4) {
-  background-color: #f7ff83;
-}
-header .header-content__right a:hover:nth-of-type(5) {
-  background-color: #d28ef2;
+header .header-content__right a:hover {
+  color: #23C5E9;
 }
 header .header-content__left {
-  padding: 1rem;
+  padding: 1rem 1rem 1rem calc(5% + 1rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .header-content__left img {
+  width: 30px;
+  height: 30px;
+  margin-right: calc(5% + 1rem);
+  margin-left: 1rem;
 }
 header .header-content__left a {
   text-decoration: none;
@@ -179,7 +176,7 @@ header .header-content__left a {
   transition: color 0.4s ease;
 }
 header .header-content__left a:hover {
-  color: #ff6bcb;
+  color: #EA60C3;
 }
 
 main {
@@ -191,8 +188,9 @@ main {
   width: 5%;
   height: 100vh;
   position: fixed;
-  z-index: 3;
-  padding: 6rem 1rem 1rem 1rem;
+  z-index: 4;
+  border-right: 1px solid #090909;
+  padding: 1rem;
 }
 .sidebar__content {
   display: flex;
@@ -203,65 +201,9 @@ main {
 .sidebar__content a {
   margin-bottom: 0.75rem;
 }
-.sidebar__content__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.sidebar__content__nav a {
-  position: relative;
-}
-.sidebar__content__nav a::before {
-  content: "";
-  position: absolute;
-  background-color: #f7f7f7;
-  border: 2px solid #090909;
-  border-right: none;
-  border-bottom: none;
-  margin-left: 29px;
-  transform: rotate(-45deg);
-  padding: 0.25rem;
-  z-index: 1;
-  margin-top: 4px;
-  display: none;
-}
-.sidebar__content__nav a::after {
-  content: "";
-  position: absolute;
-  background-color: #f7f7f7;
-  border: 2px solid #090909;
-  padding: 0.25rem 0.45rem;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-family: "Lineal Regular";
-  color: #090909;
-  font-size: 14px;
-  margin-top: -7px;
-  left: 33.5px;
-  display: none;
-}
-.sidebar__content__nav a:nth-of-type(1)::after {
-  content: "Home";
-}
-.sidebar__content__nav a:nth-of-type(2)::after {
-  content: "About Me";
-}
-.sidebar__content__nav a:nth-of-type(3)::after {
-  content: "Projects";
-}
-.sidebar__content__nav a:nth-of-type(4)::after {
-  content: "Services";
-}
-.sidebar__content__nav a:nth-of-type(5)::after {
-  content: "Testimonials";
-}
-.sidebar__content__nav a:nth-of-type(6)::after {
-  content: "Contact";
-}
-.sidebar__content__nav a:hover::before, .sidebar__content__nav a:hover::after {
-  display: inline;
+.sidebar__content__logo img {
+  height: 100%;
+  width: 100%;
 }
 .sidebar__content__socials {
   display: flex;
@@ -277,24 +219,21 @@ main {
   transition: color 0.4s ease;
 }
 .sidebar__content i:hover {
-  color: #ff6bcb;
+  color: #23C5E9;
 }
 
 .main-content {
   width: 95%;
-  border-left: 3px solid #090909;
   left: 5%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .main-content__inner {
-  padding: 8rem 5rem 2rem 5rem;
+  padding: 8rem 2.5rem 2rem 2.5rem;
   min-height: 150vh;
   height: 100%;
 }
 .main-content__inner .section-indicator {
-  padding: 0.5rem 0.75rem;
-  border: 2px solid #090909;
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -303,8 +242,8 @@ main {
 }
 .main-content__inner .section-indicator p {
   margin: 0;
-  font-size: 16px !important;
-  font-family: "Lineal Regular" !important;
+  font-size: 20px !important;
+  font-family: "Soria" !important;
 }
 .main-content__inner .section-indicator i {
   font-size: 14px;
@@ -313,56 +252,68 @@ main {
 .main-content__inner section {
   padding-bottom: 5rem;
 }
+.main-content__inner section:not(:first-of-type) {
+  border-top: 1px solid #090909;
+  padding-top: 3rem;
+}
+.main-content__inner section:last-of-type {
+  padding-bottom: 0;
+}
 .main-content__inner .home-section h1 {
   font-family: "Soria";
-  font-size: 92px;
+  font-size: 54px;
   margin: 0;
-}
-.main-content__inner .home-section h1 span {
-  color: #ff6bcb;
+  font-weight: 500;
 }
 .main-content__inner .home-section h1 span.font-switch {
-  color: #090909;
   font-family: "Lineal Regular";
 }
 .main-content__inner .home-section h2 {
   font-family: "Soria";
-  font-size: 72px;
+  font-size: 54px;
   margin: 0;
+  padding-top: 0.3rem;
+  font-weight: 500;
 }
 .main-content__inner .home-section h2 span {
-  color: #39c4ff;
+  color: #23C5E9;
 }
 .main-content__inner .home-section p {
-  font-size: 28px;
+  font-size: 24px;
   font-family: "League Spartan";
   line-height: 1.2;
+  width: 75%;
 }
-.main-content__inner .about-section h3 {
-  font-size: 42px;
-  font-family: "Soria";
+.main-content__inner .about-section {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.main-content__inner .about-section h3 span {
-  color: #d28ef2;
+.main-content__inner .about-section .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
 }
-.main-content__inner .about-section p {
+.main-content__inner .about-section .text-wrapper p {
   font-size: 22px;
   font-family: "League Spartan";
   line-height: 1.2;
+  margin: 0 0 1.25rem 0;
 }
-.main-content__inner .about-section p span {
-  color: #00c807;
+.main-content__inner .about-section .text-wrapper p span {
+  color: #23C5E9;
 }
-.main-content__inner .about-section p a {
-  color: #ff6bcb;
+.main-content__inner .about-section .text-wrapper p a {
+  color: #EA60C3;
   text-decoration: underline;
 }
-.main-content__inner .services-section h3 {
-  font-size: 42px;
-  font-family: "Soria";
-}
-.main-content__inner .services-section h3 span {
-  color: #39c4ff;
+.main-content__inner .services-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .main-content__inner .services-section p {
   font-size: 22px;
@@ -370,13 +321,14 @@ main {
   line-height: 1.2;
 }
 .main-content__inner .services-section p span {
-  color: #ff6bcb;
+  color: #EA60C3;
 }
 .main-content__inner .services-section__boxes {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 85%;
 }
 .main-content__inner .services-section__boxes__box {
   display: flex;
@@ -388,20 +340,20 @@ main {
   flex-direction: row;
   align-items: center;
 }
-.main-content__inner .services-section__boxes__box .top i {
-  font-size: 22px;
-  padding-right: 0.75rem;
-  color: #d28ef2;
-}
 .main-content__inner .services-section__boxes__box .top h4 {
   margin: 0;
-  font-size: 26px;
+  font-size: 32px;
+  font-family: "Soria";
+  font-weight: 500;
+}
+.main-content__inner .services-section__boxes__box p {
+  margin-top: 0.75rem;
 }
 .main-content__inner .services-section__boxes__box p span {
-  color: #ff6bcb;
+  color: #EA60C3;
 }
 .main-content__inner .services-section__boxes__box p a {
-  color: #ff6bcb;
+  color: #EA60C3;
   text-decoration: underline;
 }
 .main-content__inner .portfolio-section {
@@ -413,9 +365,17 @@ main {
   justify-content: space-between;
 }
 .main-content__inner .portfolio-section .section-top a {
-  font-family: "Lineal Regular";
+  font-family: "League Spartan";
   color: #090909;
-  font-size: 24px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.main-content__inner .portfolio-section .section-top a i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.main-content__inner .portfolio-section .section-top a:hover i {
+  transform: translateX(3px);
 }
 .main-content__inner .portfolio-section__boxes {
   display: flex;
@@ -426,9 +386,10 @@ main {
   padding-bottom: 1.5rem;
 }
 .main-content__inner .portfolio-section__boxes__box {
-  border: 3px solid #090909;
+  border: 1px solid #090909;
+  text-decoration: none;
   max-width: 450px;
-  width: 33%;
+  width: 32%;
   position: relative;
   transition: box-shadow 0.3s ease;
 }
@@ -436,16 +397,16 @@ main {
   position: absolute;
   display: flex;
   flex-direction: row;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 .main-content__inner .portfolio-section__boxes__box__tags p {
-  padding: 0.25rem;
-  font-size: 17px;
+  padding: 0.25rem 0.5rem;
+  font-size: 16px;
   background-color: #f7f7f7;
-  border: 2px solid #090909;
+  border: 1px solid #090909;
   margin: 0;
   margin-right: 0.5rem;
-  font-family: "Lineal Regular";
+  font-family: "Soria";
 }
 .main-content__inner .portfolio-section__boxes__box img {
   width: 100%;
@@ -455,39 +416,99 @@ main {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-bottom: 2px solid #090909;
+  border-bottom: 1px solid #090909;
 }
 .main-content__inner .portfolio-section__boxes__box__text {
   padding: 1rem;
 }
 .main-content__inner .portfolio-section__boxes__box__text h3 {
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Soria";
   margin: 0;
+  font-weight: 500;
 }
 .main-content__inner .portfolio-section__boxes__box:hover {
   box-shadow: 7px 7px 0px 0px rgb(0, 0, 0);
+}
+.main-content__inner .contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-content__inner .contact-section .form-wrapper {
+  width: 85%;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container {
+  margin: 0;
+  padding: 0;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field:first-of-type {
+  padding-top: 3px;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field label, .main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field legend {
+  font-family: "Soria";
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field fieldset label {
+  font-family: "League Spartan" !important;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field input, .main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field textarea {
+  background-color: #f7f7f7;
+  border: none;
+  border-bottom: 1px solid #090909;
+  font-family: "League Spartan";
+  font-size: 20px;
+  border-radius: 0;
+  max-width: 100% !important;
+  padding: 0 0 5px 0;
+  color: #090909;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field input:focus, .main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field textarea:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form .wpforms-field-container .wpforms-field textarea {
+  resize: none;
+  height: calc(var(--wpforms-field-size-input-height) * 1);
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form button {
+  background-color: #f7f7f7 !important;
+  color: #090909 !important;
+  border: 1px solid #090909;
+  border-radius: 0;
+  font-family: "Soria";
+  padding: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+.main-content__inner .contact-section .form-wrapper .wpforms-container form button:hover {
+  box-shadow: 3px 3px 0px 0px rgb(0, 0, 0);
+  background-color: #f7f7f7 !important;
+  background: none;
 }
 
 footer {
   background-color: #f7f7f7;
   color: #090909;
-  padding: 1rem 2rem;
-  margin-left: -3px;
-  border: 3px solid #090909;
+  padding: 0.5rem 2.5rem;
+  margin-left: -1px;
+  border: 1px solid #090909;
+  border-bottom: none;
   border-right: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 footer p {
-  font-family: "Lineal Regular";
+  font-family: "League Spartan";
   font-size: 1rem;
 }
 footer p span {
-  font-family: "Soria";
-  color: #39c4ff;
-  font-size: 1.3rem;
+  color: #23C5E9;
 }
 footer .footer__links {
   display: flex;
@@ -502,7 +523,7 @@ footer .footer__links p a {
   transition: color 0.4s ease;
 }
 footer .footer__links p a:hover {
-  color: #39c4ff;
+  color: #23C5E9;
 }
 footer .footer__links:last-of-type {
   margin-right: 0;

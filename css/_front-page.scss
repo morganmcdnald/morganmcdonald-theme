@@ -7,8 +7,9 @@ main {
   width: 5%;
   height: 100vh;
   position: fixed;
-  z-index: 3;
-  padding: 6rem 1rem 1rem 1rem;
+  z-index: 4;
+  border-right: 1px solid $black;
+  padding: 1rem;
   &__content {
     display: flex;
     flex-direction: column;
@@ -17,77 +18,10 @@ main {
     a {
       margin-bottom: 0.75rem;
     }
-    &__nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      a {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          background-color: $white;
-          border: 2px solid $black;
-          border-right: none;
-          border-bottom: none;
-          margin-left: 29px;
-          transform: rotate(-45deg);
-          padding: 0.25rem;
-          z-index: 1;
-          margin-top: 4px;
-          display: none;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          background-color: $white;
-          border: 2px solid $black;
-          padding: 0.25rem 0.45rem;
-          min-width: fit-content;
-          width: max-content;
-          font-family: "Lineal Regular";
-          color: $black;
-          font-size: 14px;
-          margin-top: -7px;
-          left: 33.5px;
-          display: none;
-        }
-        &:nth-of-type(1) {
-          &::after {
-            content: "Home";
-          }
-        }
-        &:nth-of-type(2) {
-          &::after {
-            content: "About Me";
-          }
-        }
-        &:nth-of-type(3) {
-          &::after {
-            content: "Projects";
-          }
-        }
-        &:nth-of-type(4) {
-          &::after {
-            content: "Services";
-          }
-        }
-        &:nth-of-type(5) {
-          &::after {
-            content: "Testimonials";
-          }
-        }
-        &:nth-of-type(6) {
-          &::after {
-            content: "Contact";
-          }
-        }
-        &:hover {
-          &::before,
-          &::after {
-            display: inline;
-          }
-        }
+    &__logo {
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
     &__socials {
@@ -105,7 +39,7 @@ main {
       font-size: 1.15rem;
       transition: color 0.4s ease;
       &:hover {
-        color: $pink;
+        color: $blue;
       }
     }
   }
@@ -113,25 +47,22 @@ main {
 
 .main-content {
   width: 95%;
-  border-left: 3px solid $black;
   left: 5%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   &__inner {
-    padding: 8rem 5rem 2rem 5rem;
+    padding: 8rem 2.5rem 2rem 2.5rem;
     min-height: 150vh;
     height: 100%;
     .section-indicator {
-      padding: 0.5rem 0.75rem;
-      border: 2px solid $black;
       display: flex;
       flex-direction: row;
       width: fit-content;
       align-items: center;
       p {
         margin: 0;
-        font-size: 16px !important;
-        font-family: "Lineal Regular" !important;
+        font-size: 20px !important;
+        font-family: "Soria" !important;
       }
       i {
         font-size: 14px;
@@ -140,65 +71,75 @@ main {
     }
     section {
       padding-bottom: 5rem;
+      &:not(:first-of-type) {
+        border-top: 1px solid $black;
+        padding-top: 3rem;
+      }
+      &:last-of-type {
+        padding-bottom: 0;
+      }
     }
     .home-section {
       h1 {
         font-family: "Soria";
-        font-size: 92px;
+        font-size: 54px;
         margin: 0;
+        font-weight: 500;
         span {
-          color: $pink;
           &.font-switch {
-            color: $black;
             font-family: "Lineal Regular";
           }
         }
       }
       h2 {
         font-family: "Soria";
-        font-size: 72px;
+        font-size: 54px;
         margin: 0;
+        padding-top: 0.3rem;
+        font-weight: 500;
         span {
           color: $blue;
         }
       }
       p {
-        font-size: 28px;
+        font-size: 24px;
         font-family: "League Spartan";
         line-height: 1.2;
+        width: 75%;
       }
     }
 
     .about-section {
-      h3 {
-        font-size: 42px;
-        font-family: "Soria";
-        span {
-          color: $purple;
-        }
-      }
-      p {
-        font-size: 22px;
-        font-family: "League Spartan";
-        line-height: 1.2;
-        span {
-          color: #00c807;
-        }
-        a {
-          color: $pink;
-          text-decoration: underline;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        p {
+          font-size: 22px;
+          font-family: "League Spartan";
+          line-height: 1.2;
+          margin: 0 0 1.25rem 0;
+          span {
+            color: $blue;
+          }
+          a {
+            color: $pink;
+            text-decoration: underline;
+          }
         }
       }
     }
 
     .services-section {
-      h3 {
-        font-size: 42px;
-        font-family: "Soria";
-        span {
-          color: $blue;
-        }
-      }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
       p {
         font-size: 22px;
         font-family: "League Spartan";
@@ -212,6 +153,7 @@ main {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 85%;
         &__box {
           display: flex;
           flex-direction: column;
@@ -220,17 +162,15 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
-            i {
-              font-size: 22px;
-              padding-right: 0.75rem;
-              color: $purple;
-            }
             h4 {
               margin: 0;
-              font-size: 26px;
+              font-size: 32px;
+              font-family: "Soria";
+              font-weight: 500;
             }
           }
           p {
+            margin-top: 0.75rem;
             span {
               color: $pink;
             }
@@ -250,9 +190,19 @@ main {
         flex-direction: row;
         justify-content: space-between;
         a {
-          font-family: "Lineal Regular";
+          font-family: "League Spartan";
           color: $black;
-          font-size: 24px;
+          text-decoration: none;
+          font-size: 18px;
+          i {
+            font-size: 12px;
+            transition: transform .3s ease;
+          }
+          &:hover {
+            i {
+              transform: translateX(3px);
+            }
+          }
         }
       }
       &__boxes {
@@ -263,24 +213,25 @@ main {
         padding-top: 3rem;
         padding-bottom: 1.5rem;
         &__box {
-          border: 3px solid $black;
+          border: 1px solid $black;
+          text-decoration: none;
           max-width: 450px;
-          width: 33%;
+          width: 32%;
           position: relative;
           transition: box-shadow 0.3s ease;
           &__tags {
             position: absolute;
             display: flex;
             flex-direction: row;
-            padding: 1rem;
+            padding: 0.75rem;
             p {
-              padding: 0.25rem;
-              font-size: 17px;
+              padding: 0.25rem 0.5rem;
+              font-size: 16px;
               background-color: $white;
-              border: 2px solid $black;
+              border: 1px solid $black;
               margin: 0;
               margin-right: 0.5rem;
-              font-family: "Lineal Regular";
+              font-family: "Soria";
             }
           }
           img {
@@ -289,18 +240,87 @@ main {
             aspect-ratio: 7 / 8;
             object-fit: cover;
             object-position: center;
-            border-bottom: 2px solid $black;
+            border-bottom: 1px solid $black;
           }
           &__text {
             padding: 1rem;
             h3 {
-              font-size: 36px;
+              font-size: 32px;
               font-family: "Soria";
               margin: 0;
+              font-weight: 500;
             }
           }
           &:hover {
             box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 1);
+          }
+        }
+      }
+    }
+    .contact-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .form-wrapper {
+        width: 85%;
+        .wpforms-container {
+          margin: 0;
+          padding: 0;
+          form {
+            .wpforms-field-container {
+              .wpforms-field {
+                &:first-of-type {
+                  padding-top: 3px;
+                }
+                label, legend {
+                  font-family: "Soria";
+                  font-size: 24px;
+                  font-weight: 500;
+                  margin-bottom: 1.5rem;
+                }
+                fieldset {
+                  label {
+                    font-family: "League Spartan" !important;
+                    font-size: 16px;
+                    margin-bottom: 0;
+                  }
+                }
+                input, textarea {
+                  background-color: $white;
+                  border: none;
+                  border-bottom: 1px solid $black;
+                  font-family: "League Spartan";
+                  font-size: 20px;
+                  border-radius: 0;
+                  max-width: 100% !important;
+                  padding: 0 0 5px 0;
+                  color: $black;
+                  &:focus {
+                    outline: none;
+                    box-shadow: none !important;
+                  }
+                }
+                textarea {
+                  resize: none;
+                  height: calc( var( --wpforms-field-size-input-height ) * 1);
+                }
+              }
+            }
+            button {
+              background-color: $white !important;
+              color: $black !important;
+              border: 1px solid $black;
+              border-radius: 0;
+              font-family: "Soria";
+              padding: 0.75rem;
+              transition: box-shadow 0.3s ease;
+              &:hover {
+                box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 1);
+                background-color: $white !important;
+                background: none;
+              }
+            }
           }
         }
       }
