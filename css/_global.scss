@@ -77,3 +77,7 @@ a:visited {
     opacity: 1;
   }
 }
+
+.stopScroll {
+  overflow: hidden !important;
+}

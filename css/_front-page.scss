@@ -4,12 +4,12 @@ main {
 }
 
 .sidebar {
-  width: 5%;
+  width: calc(50px + 1rem);
   height: 100vh;
   position: fixed;
   z-index: 4;
   border-right: 1px solid $black;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   &__content {
     display: flex;
     flex-direction: column;
@@ -20,8 +20,10 @@ main {
     }
     &__logo {
       img {
-        height: 100%;
+        height: 50px;
         width: 100%;
+        padding: 0.75rem;
+        margin-top: 3px;
       }
     }
     &__socials {
@@ -319,6 +321,117 @@ main {
                 box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 1);
                 background-color: $white !important;
                 background: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+// @media screen and (max-width: 1250px) {
+//   .sidebar {
+//     width: 6%;
+//   }
+// }
+
+// @media screen and (max-width: 1000px) {
+//   .sidebar {
+//     width: 7%;
+//   }
+// }
+
+@media screen and (max-width: 689px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .main-content {
+    &__inner {
+      padding: 5rem 2.5rem 2rem 2.5rem;
+      section {
+        padding-bottom: 2.5rem;
+        &:not(:first-of-type) {
+          padding-top: 1.5rem;
+        }
+        .section-indicator {
+          padding-bottom: 1rem;
+        }
+      }
+      .home-section {
+        h1, h2 {
+          font-size: 44px;
+        }
+        p {
+          width: 90%;
+          font-size: 20px;
+        }
+      }
+      .about-section {
+        flex-direction: column;
+        .text-wrapper {
+          width: 90%;
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      .portfolio-section {
+        &__boxes {
+          padding-top: 1.5rem;
+          padding-bottom: 0.5rem;
+          flex-direction: column;
+          &__box {
+            width: 100%;
+            img {
+              aspect-ratio: 5/4;
+            }
+            &:not(:last-of-type) {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+      .services-section {
+        flex-direction: column;
+        &__boxes {
+          &__box {
+            .top {
+              h4 {
+                font-size: 28px;
+              }
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .contact-section {
+        flex-direction: column;
+        .form-wrapper {
+          width: 100%;
+          padding-top: 1rem;
+          .wpforms-container {
+            form {
+              .wpforms-field-container {
+                .wpforms-field {
+                  label, legend {
+                    font-size: 20px;
+                    margin-bottom: 0.75rem;
+                  }
+                  input, textarea {
+                    font-size: 16px;
+                  }
+                }
               }
             }
           }
