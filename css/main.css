@@ -125,6 +125,10 @@ a:visited {
   overflow: hidden !important;
 }
 
+.edit-post-sidebar .components-flex {
+  height: auto !important;
+}
+
 header {
   position: fixed;
   background-color: #f7f7f7;
@@ -520,6 +524,7 @@ main {
   padding-bottom: 1.5rem;
 }
 .main-content__inner .portfolio-section__boxes__box {
+  color: #090909;
   border: 1px solid #090909;
   text-decoration: none;
   max-width: 450px;
@@ -737,4 +742,8 @@ footer .footer__links p a:hover {
 }
 footer .footer__links:last-of-type {
   margin-right: 0;
+}
+
+.edit-post-sidebar .components-flex {
+  height: auto !important;
 }/*# sourceMappingURL=main.css.map */

@@ -2,16 +2,16 @@
 
 <main>
     <section class="sidebar">
-       <div class="sidebar__content fade-in">
-        <div class="sidebar__content__logo">
-            <img src="/wp-content/themes/morganmcdonald-theme/images/logo-colour.svg" alt="">
+        <div class="sidebar__content fade-in">
+            <div class="sidebar__content__logo">
+                <img src="/wp-content/themes/morganmcdonald-theme/images/logo-colour.svg" alt="">
+            </div>
+            <div class="sidebar__content__socials">
+                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
-        <div class="sidebar__content__socials">
-            <a href="#"><i class="fa-regular fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-       </div>
     </section>
 
     <section class="main-content">
@@ -32,7 +32,7 @@
                     <p>If you are interested in working together, please <a href="#">get in touch</a>!</p>
                 </div>
             </section>
-            
+
             <section class="portfolio-section fade-in" id="portfolio-section">
                 <div class="section-top">
                     <div class="section-indicator">
@@ -41,36 +41,29 @@
                     <a href="#">view all projects <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
                 <div class="portfolio-section__boxes">
-                    <a href="#" class="portfolio-section__boxes__box">
-                        <div class="portfolio-section__boxes__box__tags">
-                            <p>wordpress</p>
-                        </div>
-                        <img src="https://media.vanityfair.com/photos/659b1d62b6a2e69c16d6f56e/master/w_1600%2Cc_limit/02_2024_Renee_Rapp02.jpg" alt="">
-                        <div class="portfolio-section__boxes__box__text">
-                            <h3>McDonald Plumbing</h3>
-                        </div>
-                    </a>
+                    <?php
+                    $projects = new WP_Query([
+                        'post_type' => 'projects',
+                        'posts_per_page' => 3,
+                        'post_status' => 'publish'
+                    ]);
 
-                    <a href="#" class="portfolio-section__boxes__box">
-                        <div class="portfolio-section__boxes__box__tags">
-                            <p>react</p>
-                            <p>node.js</p>
-                        </div>
-                        <img src="https://pbs.twimg.com/media/F6usV0CWIAAJdiO?format=jpg&name=large" alt="">
-                        <div class="portfolio-section__boxes__box__text">
-                            <h3>SmolScreen</h3>
-                        </div>
-                    </a>
 
-                    <a href="#" class="portfolio-section__boxes__box">
-                        <div class="portfolio-section__boxes__box__tags">
-                            <p>wordpress</p>
-                        </div>
-                        <img src="https://64.media.tumblr.com/6afce3f2f637c7dd89ab2830622a1755/f389f3159e508932-40/s1280x1920/34f04abd540af502827567808ada535f2855a961.jpg" alt="">
-                        <div class="portfolio-section__boxes__box__text">
-                            <h3>Hammond Realty</h3>
-                        </div>
-                    </a>
+                    while ($projects->have_posts()) {
+                        $projects->the_post();
+                        $id = get_the_id(); ?>
+
+                        <a href="<?php echo get_the_permalink(); ?>" class="portfolio-section__boxes__box">
+                            <div class="portfolio-section__boxes__box__tags">
+                                <p>wordpress</p>
+                                <p>react</p>
+                            </div>
+                            <img src="<?php the_post_thumbnail_url($id); ?>" alt="">
+                            <div class="portfolio-section__boxes__box__text">
+                                <h3><?php echo get_the_title($id); ?></h3>
+                            </div>
+                        </a>
+                    <?php } //End while ?>
                 </div>
             </section>
 
@@ -101,7 +94,7 @@
                         <div class="top">
                             <h4>Design</h4>
                         </div>
-                        <p>If you aren't sure how you want your site to look, I can work with you and create a design you are happy with before work begins. On top of site designs, I also provide graphic design services. You can check out my  <a href="#">Instagram</a> to see some examples of my work there.</p>
+                        <p>If you aren't sure how you want your site to look, I can work with you and create a design you are happy with before work begins. On top of site designs, I also provide graphic design services. You can check out my <a href="#">Instagram</a> to see some examples of my work there.</p>
                     </div>
                     <div class="services-section__boxes__box">
                         <div class="top">
@@ -117,7 +110,7 @@
                     <p>contact</p>
                 </div>
                 <div class="form-wrapper">
-                    <?php echo do_shortcode('[wpforms id="9"]');?>
+                    <?php echo do_shortcode('[wpforms id="9"]'); ?>
                 </div>
             </section>
         </div>
@@ -127,4 +120,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>

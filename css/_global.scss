@@ -81,3 +81,9 @@ a:visited {
 .stopScroll {
   overflow: hidden !important;
 }
+
+.edit-post-sidebar {
+  .components-flex {
+      height: auto !important;
+  }
+}
