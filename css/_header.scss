@@ -46,9 +46,14 @@ header {
       align-items: center;
       a {
         text-decoration: none;
+        color: $black;
         font-family: "League Spartan", serif;
         margin: 0.5rem 0;
         font-size: 2rem;
+        transition: color .3s ease;
+        &:hover {
+          color: $pink;
+        }
       }
     }
   }
@@ -70,7 +75,7 @@ header {
         align-items: center;
         color: $black;
         transition: color 0.3s ease;
-        &:nth-of-type(5) {
+        &:nth-of-type(4) {
           margin-right: 1.5rem;
         }
         &:hover {
@@ -103,7 +108,7 @@ header {
 }
 
 //Media Queries
-@media screen and (max-width: 689px) {
+@media screen and (max-width: 699px) {
   header {
     .header-content {
       display: none;
@@ -114,6 +119,7 @@ header {
       justify-content: space-between;
       &__left {
         a {
+          color: $black;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -123,7 +129,7 @@ header {
           transition: color 0.4s ease;
           img {
             height: 50px;
-            width: 100%;
+            width: 90%;
             padding: 0.75rem;
             margin-right: 0.5rem;
             border-right: 1px solid $black;

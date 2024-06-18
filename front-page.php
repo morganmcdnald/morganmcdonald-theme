@@ -7,9 +7,10 @@
                 <img src="/wp-content/themes/morganmcdonald-theme/images/logo-colour.svg" alt="">
             </div>
             <div class="sidebar__content__socials">
-                <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:hello@morganmcdonald.co.uk" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/morganmcdnald/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/morganmcdonald13/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/morgandzns/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -63,7 +64,8 @@
                                 <h3><?php echo get_the_title($id); ?></h3>
                             </div>
                         </a>
-                    <?php } //End while ?>
+                    <?php } //End while 
+                    ?>
                 </div>
             </section>
 

@@ -48,8 +48,8 @@ main {
 }
 
 .main-content {
-  width: 95%;
-  left: 5%;
+  width: calc(100% - 68px);
+  left: calc(50px + 1rem);
   position: relative;
   z-index: 3;
   &__inner {
@@ -344,7 +344,7 @@ main {
 //   }
 // }
 
-@media screen and (max-width: 689px) {
+@media screen and (max-width: 699px) {
   .sidebar {
     display: none;
   }
